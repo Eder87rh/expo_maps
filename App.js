@@ -6,7 +6,7 @@ import { Constants, Location, Permissions, MapView } from 'expo';
  *https://maps.googleapis.com/maps/api/place/nearbysearch/json?
  *location=-33.8670522,151.1957362&radius=500&type=food&key=YOUR_API_KEY
 **/
-const { width, heiht } = Dimensions.get('window')
+
 const LATITUDEDELTA = 0.0922;
 const LONGITUDEDELTA = 0.922;
 
@@ -161,7 +161,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     paddingTop: Constants.statusBarHeight,
-    backgroundColor: '#ecf0f1',
+    backgroundColor: '#FFFFFF',
   },
   paragraph: {
     margin: 24,
@@ -169,8 +169,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   map: {
-    flex: 1,
-    width: width
+     ...StyleSheet.absoluteFillObject,
   },
   marker: {
     width: 8,
